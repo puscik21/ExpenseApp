@@ -1,0 +1,28 @@
+{
+    "list":[
+        {
+            "id": 0,
+            "name": "Food",
+            "spent" : 0,
+            "budget": 800
+        },
+        {
+            "id": 1,
+            "name": "Hobby",
+            "spent" : 0,
+            "budget": 1000
+        },
+        {
+            "id": 2,
+            "name": "Entertainment",
+            "spent" : 0,
+            "budget": 600
+        },
+        {
+            "id": 3,
+            "name": "Travel",
+            "spent" : 0,
+            "budget": 500
+        }
+    ]
+}
