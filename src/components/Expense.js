@@ -8,8 +8,7 @@ function Expense(props) {
         paddingTop: '1em',
         fontWeight: '500',
         backgroundColor: backgroundColor,
-        color: color,
-        borderRadius: '5%'
+        color: color
     }
     const [ expenseStyle, setExpenseStyle ] = useState(defaultStyle)
     const [ isExpanded, setIsExpanded ] = useState(false)
