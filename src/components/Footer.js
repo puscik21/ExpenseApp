@@ -1,9 +1,16 @@
 import React from 'react'
-import '../styles/Footer.css'
+import { Jumbotron as Jumbo, Container } from 'react-bootstrap'
 
 function Footer() {
     return (
-        <footer>Some footer</footer>
+        <Container>
+            <footer className='footer mt-auto py-lg-1 fixed-bottom bg-dark text-white'>
+                <div className="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="#!"> Grzes.com</a>
+                    <h5 className="mb-1">No piekna ta strona jest</h5>
+                </div>
+            </footer>
+        </Container>
     )
 }
 export default Footer

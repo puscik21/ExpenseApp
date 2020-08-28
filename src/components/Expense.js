@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/Expense.css'
+import { Form, InputGroup, FormControl, Button } from 'react-bootstrap'
 
 function Expense(props) {
     const {name, spent, budget, backgroundColor, color} = props
@@ -8,7 +9,8 @@ function Expense(props) {
         paddingTop: '1em',
         fontWeight: '500',
         backgroundColor: backgroundColor,
-        color: color
+        color: color,
+        margin: '10px'
     }
     const [ expenseStyle, setExpenseStyle ] = useState(defaultStyle)
     const [ isExpanded, setIsExpanded ] = useState(false)
@@ -28,7 +30,7 @@ function Expense(props) {
             setIsExpanded(false)
         } else {
             setExpenseStyle({...expenseStyle,
-                height: '20em'
+                height: '15em'
             })
             setIsExpanded(true)
         }
@@ -53,17 +55,18 @@ function Expense(props) {
     const expandableForm = () => {
         if (isExpanded) {
             return (
-                <div>
-                    <form id="lastExpensesForm">
-                        <input
-                            id="lastExpensesText"
-                            value={lastExpense}
-                            onClick={e => e.stopPropagation()}
-                            onChange={handleLastExpenseChange}
-                        />
-                        <button id="lastExpensesButton" onClick={addExpense}>Add expense</button>
-                    </form>
-                </div>
+                <InputGroup className="mb-3 justify-content-center">
+                    <FormControl
+                        className="col-lg-6"
+                        placeholder="New expense"
+                        aria-describedby="basic-addon2"
+                        onClick={e => e.stopPropagation()}
+                        onChange={handleLastExpenseChange}
+                    />
+                    <InputGroup.Append>
+                        <Button variant="outline-light bg-dark" onClick={addExpense}>Button</Button>
+                    </InputGroup.Append>
+                </InputGroup>
             )
         } else {
             return null

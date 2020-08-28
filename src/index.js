@@ -9,24 +9,20 @@ import { NoMatch } from './components/NoMatch'
 import { Layout } from "./styles/components/Layout";
 import { NavigationBar } from "./styles/components/NavigationBar";
 import { Jumbotron } from "./styles/components/Jumbotron";
-import  Slides  from "./styles/components/Slides.js"
+import Slides  from "./styles/components/Slides.js"
+import Footer from "./components/Footer";
+import Cover from "./styles/components/Cover"
+import Main from "./components/Main";
 
 ReactDOM.render(
   <React.StrictMode>
       <React.Fragment>
-          <NavigationBar />
-          <Jumbotron />
-          <Layout>
               <Router>
                   <Switch>
-                      <Route exact path="/" component={App} />
-                      <Route exact path="/about" component={About} />
-                      <Route exact path="/contact" component={Contact} />
-                      <Route exact path="/slides" component={Slides} />
-                      <Route component={NoMatch} />
+                      <Route exact path="/" component={Cover} />
+                      <Route path="/main" component={Main} />
                   </Switch>
               </Router>
-          </Layout>
       </React.Fragment>
   </React.StrictMode>,
   document.getElementById('root')

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Expense from './Expense'
 import expensesTemplates from '../data/expensesTemplates.json'
 import newExpensesData from '../data/expensesData.json'
+import {Button} from "react-bootstrap";
 
 function ExpensesList() {
     const [expensesData, setExpensesData] = useState(expensesTemplates.list)
@@ -14,12 +15,14 @@ function ExpensesList() {
             return expensesData.map(expense => {
                 if (expense.id % 2 === 0) {
                     return {...expense, 
-                        backgroundColor: "#f5f471",
+                        // backgroundColor: "#f5f471",
+                        backgroundColor: "#d7d7b3",
                         color: "#333333"
                     }
                 } else {
                     return {...expense, 
-                        backgroundColor: "#72722e",
+                        // backgroundColor: "#72722e",
+                        backgroundColor: "#404039",
                         color: "#dddddd"
                     }
                 }
@@ -76,7 +79,7 @@ function ExpensesList() {
     return (         
         <div> 
             {expenses}
-            <button onClick={updateExpenses}>update</button>
+            <Button variant="outline-dark btn-lg" onClick={updateExpenses}>Update</Button>
         </div>
     )
 }

@@ -1,17 +1,19 @@
 import React from 'react';
 import '../styles/App.css'
-import Header from './Header'
 import ExpensesList from './ExpensesList'
-import Footer from './Footer'
+import { Container } from 'react-bootstrap'
+import { Link } from "react-router-dom";
+import {Contact} from "./Contact";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <ExpensesList />
-      <Footer />
-    </div>
+      <Container>
+        <div className="App">
+            <ExpensesList />
+        </div>
+      </Container>
   );
 }
 
-export default App;
+export default App
